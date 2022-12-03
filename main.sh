@@ -169,7 +169,7 @@ done
 #exit 1
 for (( x = 0; x < ${#xstart[@]}; x += 1 ))
 do
-	echo "running command intermediate.sh ${xstart[$x]} ${xstop[$x]} ${ystart[$x]} ${ystop[$x]} $granularity2"
-	command sbatch --output="$outputfolder/batch-%j.out" intermediate.sh ${xstart[$x]} ${xstop[$x]} ${ystart[$x]} ${ystop[$x]} $granularity2
+	echo "running command branch.sh ${xstart[$x]} ${xstop[$x]} ${ystart[$x]} ${ystop[$x]} $granularity2"
+	command sbatch --output="$outputfolder/batch-%j.out" branch.sh ${xstart[$x]} ${xstop[$x]} ${ystart[$x]} ${ystop[$x]} $granularity2
 done
 
